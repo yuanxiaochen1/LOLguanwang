@@ -1,0 +1,3216 @@
+@keyframes arrowanim {
+  0%,
+  100%,
+  54% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  18%,
+  36% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+  27% {
+    -webkit-transform: translateX(-1px);
+    transform: translateX(-1px);
+  }
+}
+@keyframes heartBeat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  14% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  28% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  42% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background-color: transparent;
+  list-style: none;
+}
+body {
+  font-size: 12px;
+  font-style: normal;
+  font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+  height: 4200px;
+  width: 100%;
+  transition: all 0.5s linear;
+}
+.container {
+  box-sizing: border-box;
+  width: 1350px;
+  height: 4200px;
+  margin: 0 auto;
+  background-color: #EEEEEE;
+  overflow: hidden;
+  position: relative;
+}
+.container .daohang {
+  width: 66px;
+  height: 300px;
+  position: fixed;
+  right: 0px;
+  top: 100px;
+  overflow: hidden;
+  border-radius: 4px 0px 0px 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  transition: all 0.5s linear;
+  display: none;
+}
+.container .daohang ul {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.container .daohang ul li {
+  width: 59px;
+  height: 50px;
+  padding: 4px;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+.container .daohang ul li span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 17px;
+  left: 15px;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-repeat: no-repeat;
+  background-size: 393px 200px;
+}
+.container .daohang ul li p {
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: #92a8ab;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+}
+.container .daohang ul li p:last-child {
+  bottom: -8px;
+}
+.container .daohang ul li .bg1 {
+  background-position: -239px -71px;
+}
+.container .daohang ul li .bg2 {
+  background-position: -333px -39px;
+}
+.container .daohang ul li .bg3 {
+  background-position: -288px -10px;
+}
+.container .daohang ul li .bg4 {
+  background-position: -255px -95px;
+}
+.container .daohang ul li .bg5 {
+  background-position: -217px -46px;
+}
+.container .daohang ul li .bg6 {
+  width: 36px;
+  height: 33px;
+  background-position: -190px -13px;
+}
+.container .daohang ul li:hover > span {
+  animation: heartBeat 1s linear infinite;
+}
+.container .daohang ul li:hover > p {
+  font-weight: bold;
+  color: #1da6ba;
+}
+.container .header {
+  width: 100%;
+  height: 360px; 
+  position: relative;
+  background: url(../imgs/011.jpg) no-repeat center top;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  transition: all 0.5s linear;
+}
+.container .header .top {
+  width: 100%;
+  height: 78px;
+  position: relative;
+  z-index: 10;
+  margin: 0px auto;
+  background: url(../imgs/dark-jianbian-repeatx-0.png) center top;
+  box-shadow: 0px -3px 167px 6px;
+}
+.container .header .top .left {
+  float: left;
+  width: 900px;
+  height: 100%;
+  display: inline-block;
+}
+.container .header .top .left ul {
+  display: block;
+  list-style-type: disc;
+}
+.container .header .top .left ul li {
+  float: left;
+  width: 148px;
+  height: 78px;
+  list-style: none;
+}
+.container .header .top .left ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+.container .header .top .left ul li a h4 {
+  font-weight: normal;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  display: block;
+}
+.container .header .top .left ul li a p {
+  color: #aeaeae;
+  font-size: 11px;
+  display: block;
+}
+.container .header .top .right {
+  float: right;
+  width: 430px;
+  height: 100%;
+  display: inline-block;
+}
+.container .header .top .right li {
+  float: left;
+  width: 50px;
+  height: 78px;
+  text-align: center;
+  line-height: 78px;
+}
+.container .header .top .right li .iconfont {
+  color: #fefefe;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "iconfont" !important;
+  font-size: 28px;
+  color: #DBBF80;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+.container .header .top .right li .icon-sousuo {
+  font-size: 27px;
+  content: "\e647";
+}
+.container .header .top .right li .icon-shouji {
+  font-size: 24px;
+  content: "\e607";
+}
+.container .header .top .right li .icon-shouji:hover + .erweima {
+  opacity: 1;
+}
+.container .header .top .right li .erweima {
+  opacity: 0;
+  width: 200px;
+  height: 170px;
+  background: url(../imgs/topfoot-spr.png) repeat;
+  position: relative;
+  left: -81px;
+  transition: 0.15s linear;
+}
+.container .header .top .right li .erweima i {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+  position: absolute;
+  top: 18px;
+  left: 40px;
+  background-color: white;
+}
+.container .header .top .right li .erweima i img {
+  width: 110px;
+  height: 110px;
+  margin-top: 4px;
+}
+.container .header .top .right li .erweima i p {
+  color: #cdbe91;
+  font-size: 12px;
+  position: absolute;
+  font: 12px/1.5 tahoma, '\5FAE\8F6F\96C5\9ED1', sans-serif;
+  top: 123px;
+}
+.container .header .top .right li .erweima i span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -40px;
+  top: 106px;
+}
+.container .header .top .right li .erweima i span img {
+  width: 100%;
+  height: 100%;
+}
+.container .header .top .right li .icon-yonghu {
+  font-size: 42px;
+  content: "\e643";
+}
+.container .header .top .right .text {
+  width: 270px;
+  height: 78px;
+  line-height: 78px;
+  position: relative;
+  top: 0px;
+}
+.container .header .top .right .text .active:hover {
+  display: block;
+}
+.container .header .top .right .text span {
+  position: relative;
+  top: -9px;
+  color: #fefefe;
+  font-size: 16px;
+}
+.container .header .top .right .text .active {
+  display: none;
+  width: 310px;
+  height: 230px;
+  position: relative;
+  top: -91px;
+  left: -2px;
+  z-index: -100;
+  background: url(../imgs/dark70-bg-repeat.png) repeat;
+}
+.container .header .top .right .text .active .p1 {
+  top: 100px;
+  display: block;
+  width: 310px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  color: #848383;
+  text-align: center;
+  line-height: 20px;
+  font: 12px/1.5 tahoma, '\5FAE\8F6F\96C5\9ED1', sans-serif;
+}
+.container .header .top .right .text .active .p2 {
+  top: 150px;
+  display: block;
+  width: 310px;
+  height: auto;
+  position: absolute;
+  font-size: 12px;
+  color: #848383;
+  text-align: center;
+  line-height: 20px;
+  font: 12px/1.5 tahoma, '\5FAE\8F6F\96C5\9ED1', sans-serif;
+}
+.container .header .top .right .text .active .login {
+  display: block;
+  width: 100%;
+  height: 44px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  line-height: 44px;
+  background-color: black;
+  color: #fefefe;
+  font-size: 16px;
+  text-decoration: none;
+}
+.container .header .top .right .text .active .login2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 0 0 5px;
+  background-position: -301px -96px;
+  background-image: url(../imgs/comm-spr.png);
+  background-size: 393px 200px;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 9px;
+}
+.container .header .top .right .text .active .login:hover > .login2 {
+  animation: arrowanim 1s linear;
+}
+.container .header .top .right .text:hover > .active {
+  display: block;
+}
+.container .header .list {
+  display: none;
+  transition: 0.3s linear;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background: url(../imgs/dark60-bg-repeat.png) repeat;
+  padding: 88px 0 32px 0;
+  z-index: 1;
+}
+.container .header .list .box {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.container .header .list .box ul {
+  width: 55%;
+  overflow: hidden;
+  margin-left: 145px;
+}
+.container .header .list .box ul li {
+  list-style: none;
+  width: 20%;
+  float: left;
+  height: auto;
+  overflow: visible;
+}
+.container .header .list .box ul li a {
+  display: block;
+  width: 100%;
+  height: 29px;
+  overflow: hidden;
+  line-height: 29px;
+  color: #e1e1e1;
+  font-size: 14px;
+  text-align: center;
+}
+.container .header .list .box ul li a:hover {
+  color: #fad668;
+}
+.container .header .header_btn {
+  display: block;
+  color: #fefefe;
+  font-size: 16px;
+  text-decoration: none;
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  margin-left: -80px;
+  background: url(../imgs/topfoot-spr.png) repeat;
+  background-position: -216px -39px;
+  opacity: 0.9;
+}
+.container .header .header_btn:hover {
+  opacity: 1;
+}
+.container .lunbo {
+  width: 1350px;
+  height: auto;
+  margin: 0px auto;
+  padding: 40px 25px 0;
+  position: relative;
+}
+.container .lunbo .left {
+  display: inline-block;
+  float: left;
+  width: 760px;
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+}
+.container .lunbo .left .imgs {
+  width: 4560px;
+  height: 305px;
+  position: absolute;
+  top: 0px;
+  display: flex;
+}
+.container .lunbo .left .imgs img {
+  display: block;
+  width: 760px;
+  height: 100%;
+}
+.container .lunbo .left .list {
+  height: 35px;
+  bottom: 0px;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+}
+.container .lunbo .left .list ul {
+  list-style: none;
+}
+.container .lunbo .left .list ul li {
+  float: left;
+  width: 152px;
+  height: 33px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 35px;
+  background-color: #e3e2e2;
+  letter-spacing: 1px;
+}
+.container .lunbo .left .list ul .active {
+  color: #ab8e66;
+  background-color: #f7f6f6;
+  border-bottom: 2px solid #c5ab86;
+}
+.container .lunbo .right {
+  overflow: hidden;
+  float: right;
+  width: 550px;
+  height: 340px;
+  position: relative;
+  display: inline-block;
+}
+.container .lunbo .right .top {
+  width: 90%;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e0e2e2;
+}
+.container .lunbo .right .top ul {
+  width: 134%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  list-style: none;
+}
+.container .lunbo .right .top ul li {
+  float: left;
+  min-width: 30px;
+  height: 32px;
+  text-align: left;
+  line-height: 14px;
+  color: #676767;
+  font-size: 18px;
+  margin: 6.5px 78px 0px 0px;
+  cursor: pointer;
+}
+.container .lunbo .right .top ul .active {
+  color: #1da6ba;
+  font-weight: 700;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 119px 26px;
+}
+.container .lunbo .right .box .item {
+  width: 100%;
+  height: 279px;
+  top: 37px;
+  display: none;
+  position: absolute;
+  left: 0px;
+}
+.container .lunbo .right .box .item .title {
+  display: block;
+  width: 100%;
+  height: 55px;
+  font-size: 22px;
+  color: #1da6ba;
+  text-indent: 80px;
+  line-height: 50px;
+  background: url(../imgs/index-spr.png) center top repeat;
+  background-position: 0px 110px;
+}
+.container .lunbo .right .box .item .title:hover {
+  color: #bb9a6c;
+}
+.container .lunbo .right .box .item ul li {
+  width: 87%;
+  height: 40px;
+  border-top: 1px solid #e0e2e2;
+  border-bottom: 1px solid #e0e2e2;
+  margin: -1px 0px -1px 0px;
+}
+.container .lunbo .right .box .item ul li .cent {
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+  margin: 8px 0px;
+  color: #bb9a6c;
+  border: 1px #c5ab86 solid;
+}
+.container .lunbo .right .box .item ul li a {
+  font-size: 13px;
+  color: black;
+  letter-spacing: 1px;
+  padding: 0px 20px 0px 20px;
+}
+.container .lunbo .right .box .item ul li a:hover {
+  color: #bb9a6c;
+}
+.container .lunbo .right .box .item ul li .number {
+  float: right;
+  color: #9d9d9d;
+  letter-spacing: 1px;
+  margin: 10px 0px;
+}
+.container .lunbo .right .box .item ul li .video {
+  color: #e9852d;
+  border: 1px #e9852d solid;
+}
+.container .lunbo .right .box .item ul li .strategy {
+  color: #4ba36a;
+  border: 1px #4ba36a solid;
+}
+.container .lunbo .right .box .item ul li .match {
+  color: #6388c5;
+  border: 1px #97afc5 solid;
+}
+.container .lunbo .right .botton {
+  width: 88%;
+  height: 35px;
+  bottom: 0px;
+  background-color: #E3E2E2;
+  position: absolute;
+  left: 0px;
+}
+.container .lunbo .right .botton a {
+  display: block;
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+.container .lunbo .right .botton a .text {
+  font-size: 14px;
+  color: #676767;
+  letter-spacing: 1px;
+}
+.container .lunbo .right .botton a .text span {
+  margin-left: 3px;
+  font-size: 14px;
+  color: #7ea1a6;
+}
+.container .lunbo .right .botton a .text i {
+  display: block;
+  width: 40px;
+  height: 24px;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 96px -91px;
+  position: absolute;
+  top: 8px;
+  left: 315px;
+}
+.container .lunbo .right .botton:hover {
+  background-color: rgba(146, 145, 145, 0.6);
+}
+.container .lunbo .right .botton:hover i {
+  animation: arrowanim 1.5s linear;
+}
+.container .sanlou {
+  width: 1350px;
+  height: 780px;
+  position: relative;
+  margin: 360px auto 0;
+  padding: 0 25px 0;
+}
+.container .sanlou .one {
+  width: 100%;
+  height: 335px;
+  position: relative;
+}
+.container .sanlou .one .left {
+  float: left;
+  width: 760px;
+  height: 335px;
+}
+.container .sanlou .one .left .top {
+  width: 100%;
+  height: 35px;
+  position: relative;
+}
+.container .sanlou .one .left .top .span {
+  display: block;
+  float: left;
+  width: 4px;
+  height: 30px;
+  margin-top: 3px;
+  background-color: #1da6ba;
+}
+.container .sanlou .one .left .top h2 {
+  float: left;
+  font-size: 24px;
+  font-weight: 400;
+  color: #0b0b0b;
+  line-height: 35px;
+  text-indent: 8px;
+}
+.container .sanlou .one .left .top ul {
+  position: absolute;
+  top: 0px;
+  left: 125px;
+  width: 635px;
+  height: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  border-bottom: 1px #d6d7d8 solid;
+}
+.container .sanlou .one .left .top ul li {
+  float: left;
+  width: auto;
+  min-width: 40px;
+  height: 36px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin: 3px 28px 0px 0px;
+  color: #676767;
+  cursor: pointer;
+}
+.container .sanlou .one .left .top ul .active {
+  font-weight: bold;
+  color: #1da6ba;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 134px 27.44px;
+}
+.container .sanlou .one .left .top ul a {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 37px;
+  font-size: 12px;
+  color: #7ea1a6;
+  text-indent: 33px;
+  line-height: 37px;
+  letter-spacing: 2px;
+}
+.container .sanlou .one .left .top ul a i {
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 19px;
+  height: 15px;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 96px -91px;
+}
+.container .sanlou .one .left .top ul a:hover {
+  font-weight: bold;
+  color: #1da6ba;
+  text-decoration: underline;
+}
+.container .sanlou .one .left .top ul a:hover > i {
+  animation: arrowanim 1.5s linear;
+}
+.container .sanlou .one .left .itemBox {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.container .sanlou .one .left .itemBox .item {
+  width: 100%;
+  height: 298px;
+  position: relative;
+  margin-top: 2px;
+  display: none;
+}
+.container .sanlou .one .left .itemBox .item ul {
+  position: relative;
+  width: 760px;
+  height: 100%;
+}
+.container .sanlou .one .left .itemBox .item ul li {
+  float: left;
+  width: 183px;
+  height: 94%;
+  margin: 16px 9px 0px 0px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.container .sanlou .one .left .itemBox .item ul li p {
+  color: black;
+  overflow: hidden;
+  transition: all 0.4s;
+  text-indent: 8px;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.container .sanlou .one .left .itemBox .item ul li span {
+  position: absolute;
+  font-size: 12px;
+  color: #1da6ba;
+  left: 10px;
+  bottom: 6px;
+  font: 12px/1.5 tahoma, '\5FAE\8F6F\96C5\9ED1', sans-serif;
+}
+.container .sanlou .one .left .itemBox .item ul li i {
+  display: block;
+  width: 31px;
+  height: 20px;
+  border-radius: 6px;
+  position: relative;
+  margin-left: 145px;
+  margin-top: 18px;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 147px 157px;
+}
+.container .sanlou .one .left .itemBox .item ul li .bg {
+  width: 183px;
+  height: 207px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  background-image: url(../imgs/dark70-bg-repeat.png);
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.container .sanlou .one .left .itemBox .item ul li .bg a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/comm-spr.png) no-repeat;
+  background-position: -3px 1px;
+}
+.container .sanlou .one .left .itemBox .item ul li .bg a .text {
+  position: relative;
+  top: 60px;
+  left: 0px;
+}
+.container .sanlou .one .left .itemBox .item ul li .bg a .text h3 {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #cdbe91;
+  overflow: hidden;
+}
+.container .sanlou .one .left .itemBox .item ul li .bg a .text p {
+  display: block;
+  width: 181px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  transition: all 0.3s;
+  overflow: hidden;
+  color: #aeaeae;
+  font-size: 11px;
+}
+.container .sanlou .one .left .itemBox .item ul li .bg a .text .p1 {
+  text-align: left;
+}
+.container .sanlou .one .left .itemBox .item ul li:nth-last-of-type(1) {
+  margin-right: 0;
+}
+.container .sanlou .one .left .itemBox .item ul li:hover > .bg {
+  opacity: 1;
+}
+.container .sanlou .one .left .itemBox .item ul li:hover {
+  transform: translateY(-5px);
+}
+.container .sanlou .one .right {
+  float: right;
+  width: 550px;
+  height: 335px;
+}
+.container .sanlou .one .right .box {
+  width: 480px;
+  height: 100%;
+}
+.container .sanlou .one .right .box .top {
+  width: 100%;
+  height: 168px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.container .sanlou .one .right .box .top .video {
+  width: 360px;
+  height: 168;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.container .sanlou .one .right .box .top .div1 {
+  width: 125px;
+  height: 76px;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: -186px 257px;
+  position: absolute;
+  top: 0px;
+  right: -8px;
+}
+.container .sanlou .one .right .box .top .div1 .A {
+  display: block;
+  width: 100%;
+  height: 76px;
+  text-indent: 39px;
+  line-height: 76px;
+  color: #fff;
+  font-weight: 700;
+}
+.container .sanlou .one .right .box .top .div1 .box1 {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+.container .sanlou .one .right .box .top .div1 .box1 a {
+  float: left;
+  width: 60px;
+  box-sizing: border-box;
+  border-right: 1px #eee solid;
+  color: #424242;
+  font-size: 12px;
+  line-height: 70px;
+  font-weight: 700;
+  text-align: center;
+}
+.container .sanlou .one .right .box .top .div1 .box1 a i {
+  display: block;
+  margin: 18px auto 0 auto;
+  font-style: normal;
+}
+.container .sanlou .one .right .box .top .div1 .box1 a .zhiyin {
+  background-position: -190px -96px;
+  width: 24px;
+  height: 22px;
+  background-image: url(../imgs/comm-spr.png);
+  background-repeat: no-repeat;
+}
+.container .sanlou .one .right .box .top .div1 .box1 a .li {
+  background-position: -212px -96px;
+  width: 24px;
+  height: 21px;
+  background-image: url(../imgs/comm-spr.png);
+  background-repeat: no-repeat;
+}
+.container .sanlou .one .right .box .top .div1 .box1 a:hover {
+  color: #1da6ba;
+}
+.container .sanlou .one .right .box .top .div1:hover > .box1 {
+  display: block;
+}
+.container .sanlou .one .right .box .top .div2 {
+  width: 125px;
+  height: 76px;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: -186px 257px;
+  position: absolute;
+  bottom: 0px;
+  right: -8px;
+  transition: all 1s;
+}
+.container .sanlou .one .right .box .top .div2 a {
+  display: block;
+  width: 100%;
+  height: 76px;
+  text-indent: 39px;
+  line-height: 76px;
+  color: #fff;
+  font-weight: 700;
+}
+.container .sanlou .one .right .box .top .div2:hover {
+  filter: brightness(1.2);
+}
+.container .sanlou .one .right .box .center {
+  width: 100%;
+  height: 68px;
+  margin-top: 18px;
+}
+.container .sanlou .one .right .box .center ul {
+  width: 550px;
+  height: 100%;
+}
+.container .sanlou .one .right .box .center ul li {
+  float: left;
+  width: 110px;
+  height: 68px;
+  margin-right: 17px;
+  position: relative;
+  background-color: white;
+}
+.container .sanlou .one .right .box .center ul li a {
+  display: block;
+  width: 110px;
+  height: 68px;
+  color: #424242;
+  text-indent: 44px;
+  line-height: 68px;
+  font-size: 12px;
+  position: relative;
+}
+.container .sanlou .one .right .box .center ul li a i {
+  display: block;
+  width: 28px;
+  height: 26px;
+  position: absolute;
+  top: 22px;
+  left: 10px;
+  background: url(../imgs/comm-spr.png) repeat;
+}
+.container .sanlou .one .right .box .center ul li a .logo1 {
+  background-position: 77px 189px;
+}
+.container .sanlou .one .right .box .center ul li a .logo2 {
+  background-position: 204px 130px;
+}
+.container .sanlou .one .right .box .center ul li a .logo3 {
+  background-position: 180px 130px;
+}
+.container .sanlou .one .right .box .center ul li a .logo4 {
+  background-position: 133px 187px;
+}
+.container .sanlou .one .right .box .center ul .A:hover a {
+  color: #1da6ba;
+}
+.container .sanlou .one .right .box .center ul .A:hover .logo1 {
+  animation: heartBeat 1s linear;
+}
+.container .sanlou .one .right .box .center ul .B:hover a {
+  color: #1da6ba;
+}
+.container .sanlou .one .right .box .center ul .B:hover .logo2 {
+  animation: heartBeat 1s linear;
+}
+.container .sanlou .one .right .box .center ul .C:hover a {
+  color: #1da6ba;
+}
+.container .sanlou .one .right .box .center ul .C:hover .logo3 {
+  animation: heartBeat 1s linear;
+}
+.container .sanlou .one .right .box .center ul .D:hover a {
+  color: #1da6ba;
+}
+.container .sanlou .one .right .box .center ul .D:hover .logo4 {
+  animation: heartBeat 1s linear;
+}
+.container .sanlou .one .right .box .botton {
+  width: 100%;
+  height: 68px;
+  margin-top: 18px;
+}
+.container .sanlou .one .right .box .botton ul {
+  width: 550px;
+  height: 100%;
+}
+.container .sanlou .one .right .box .botton ul li {
+  float: left;
+  width: 110px;
+  height: 68px;
+  margin-right: 17px;
+  position: relative;
+  background-color: white;
+}
+.container .sanlou .one .right .box .botton ul li a {
+  display: block;
+  width: 110px;
+  height: 68px;
+  color: #424242;
+  text-indent: 44px;
+  line-height: 68px;
+  font-size: 12px;
+  position: relative;
+}
+.container .sanlou .one .right .box .botton ul li a i {
+  display: block;
+  width: 28px;
+  height: 26px;
+  position: absolute;
+  top: 22px;
+  left: 10px;
+  background: url(../imgs/comm-spr.png) repeat;
+}
+.container .sanlou .one .right .box .botton ul li a .logo1 {
+  background-position: 164px 191px;
+}
+.container .sanlou .one .right .box .botton ul li a .logo2 {
+  background-position: 105px 130px;
+}
+.container .sanlou .one .right .box .botton ul li a .logo3 {
+  background-position: 78px 133px;
+}
+.container .sanlou .one .right .box .botton ul li a .logo4 {
+  background-position: 23px 192px;
+}
+.container .sanlou .one .right .box .botton ul li a .logo5 {
+  background-position: 146px 161px;
+  top: -5px;
+  left: 2px;
+}
+.container .sanlou .one .right .box .botton ul .A:hover a {
+  color: #1da6ba;
+}
+.container .sanlou .one .right .box .botton ul .A:hover .logo1 {
+  animation: heartBeat 1s linear;
+}
+.container .sanlou .one .right .box .botton ul .B:hover a {
+  color: #1da6ba;
+}
+.container .sanlou .one .right .box .botton ul .B:hover .logo2 {
+  animation: heartBeat 1s linear;
+}
+.container .sanlou .one .right .box .botton ul .C:hover a {
+  color: #1da6ba;
+}
+.container .sanlou .one .right .box .botton ul .C:hover .logo3 {
+  animation: heartBeat 1s linear;
+}
+.container .sanlou .one .right .box .botton ul .D:hover a {
+  color: #1da6ba;
+}
+.container .sanlou .one .right .box .botton ul .D:hover .logo4 {
+  animation: heartBeat 1s linear;
+}
+.container .sanlou .two {
+  width: 100%;
+  height: 254px;
+  margin: 40px 0px;
+  position: relative;
+}
+.container .sanlou .two .left {
+  width: 760px;
+  height: 100%;
+  position: relative;
+  float: left;
+  background: #1da6ba;
+}
+.container .sanlou .two .left .A {
+  float: left;
+  width: 374px;
+  height: 100%;
+  margin-right: 12px;
+  position: relative;
+}
+.container .sanlou .two .left .A .bg {
+  width: 100%;
+  height: 100px;
+  background: url(../imgs/pic-mask-0.png) repeat;
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+}
+.container .sanlou .two .left .A .logo {
+  display: block;
+  width: 90px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  text-align: center;
+  line-height: 30px;
+  color: #cdbe91;
+  font-size: 14px;
+  background-color: #0b0b0b;
+}
+.container .sanlou .two .left .A img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.container .sanlou .two .left .A .title {
+  position: absolute;
+  top: 180px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  text-indent: 20px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #cdbe91;
+  z-index: 100;
+}
+.container .sanlou .two .left .A .text {
+  position: absolute;
+  top: 210px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  text-indent: 22px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #cfcfcf;
+  z-index: 100;
+}
+.container .sanlou .two .left .A .zheBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  overflow: hidden;
+  opacity: 0;
+  background: url(../imgs/dark70-bg-repeat.png) repeat;
+}
+.container .sanlou .two .left .A .zheBg .Bg {
+  width: 100%;
+  height: 100%;
+  margin: -3px 4px;
+  background: url(../imgs/index-spr.png) repeat;
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+}
+.container .sanlou .two .left .A .zheBg .Bg h3 {
+  font-weight: normal;
+  color: #cdbe91;
+  font-size: 18px;
+  position: absolute;
+  left: 17px;
+  top: 6px;
+}
+.container .sanlou .two .left .A .zheBg .Bg .btn {
+  width: 154px;
+  height: 42px;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: -402px 393px;
+  position: absolute;
+  top: 190px;
+  left: 30px;
+  color: #ffdb8b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 42px;
+}
+.container .sanlou .two .left .A .zheBg .Bg ul {
+  width: 450px;
+  height: 140px;
+  position: relative;
+  top: 18px;
+  left: 0px;
+  padding: 10px 0px;
+  list-style: none;
+  margin: 0;
+}
+.container .sanlou .two .left .A .zheBg .Bg ul li {
+  float: left;
+  width: 170px;
+  height: 40px;
+  margin: 10px 10px;
+  position: relative;
+}
+.container .sanlou .two .left .A .zheBg .Bg ul li p {
+  display: block;
+  float: left;
+  width: 100px;
+  height: 40px;
+  color: white;
+  text-align: left;
+  line-height: 40px;
+  font-size: 12px;
+  z-index: 11;
+}
+.container .sanlou .two .left .A .zheBg .Bg ul li span {
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 60px;
+}
+.container .sanlou .two .left .A .zheBg .Bg ul li span .bai {
+  float: left;
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin-top: 20px;
+  margin-right: 6px;
+  background-color: white;
+}
+.container .sanlou .two .left .A .zheBg .Bg ul li span .hei {
+  float: left;
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin-top: 20px;
+  margin-right: 6px;
+  background-color: #6c6c6c;
+}
+.container .sanlou .two .left .A:hover > .zheBg {
+  opacity: 1;
+}
+.container .sanlou .two .left .B {
+  float: right;
+  width: 374px;
+  height: 100%;
+  position: relative;
+}
+.container .sanlou .two .left .B .bg {
+  width: 100%;
+  height: 100px;
+  background: url(../imgs/pic-mask-0.png) repeat;
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+}
+.container .sanlou .two .left .B .logo {
+  display: block;
+  width: 90px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  text-align: center;
+  line-height: 30px;
+  color: #cdbe91;
+  font-size: 14px;
+  background-color: #0b0b0b;
+}
+.container .sanlou .two .left .B img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.container .sanlou .two .left .B .title {
+  position: absolute;
+  top: 180px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  text-indent: 20px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #cdbe91;
+  z-index: 100;
+}
+.container .sanlou .two .left .B .text {
+  position: absolute;
+  top: 210px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  text-indent: 22px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #cfcfcf;
+  z-index: 100;
+}
+.container .sanlou .two .left .B .video {
+  opacity: 0;
+  width: 403px;
+  height: 254px;
+  position: absolute;
+  top: -24px;
+  left: -20px;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+.container .sanlou .two .left .B .video .video_top {
+  width: 100%;
+  height: 240px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.container .sanlou .two .left .B .video .video_top .bottom {
+  width: 100%;
+  height: 61px;
+  position: absolute;
+  bottom: -61px;
+  background-color: white;
+}
+.container .sanlou .two .left .B .video .video_top .bottom p {
+  display: block;
+  width: 280px;
+  height: 30px;
+  text-indent: 20px;
+  overflow: hidden;
+  line-height: 30px;
+  color: #0b0b0b;
+  font-size: 16px;
+}
+.container .sanlou .two .left .B .video .video_top .bottom span {
+  display: block;
+  width: 280px;
+  height: 20px;
+  width: 100px;
+  text-indent: 20px;
+  line-height: 20px;
+  color: #a1a1a2;
+}
+.container .sanlou .two .left .B .video .video_top .bottom a {
+  display: block;
+  width: 86px;
+  height: 30px;
+  border: 1px solid #bb9a6c;
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  font-size: 14px;
+  color: #bb9a6c;
+  text-align: center;
+  line-height: 30px;
+}
+.container .sanlou .two .left .B .video .video_top .bottom a:hover {
+  background: #bb9a6c;
+  color: white;
+}
+.container .sanlou .two .left .B .list {
+  width: 1350px;
+  height: 0px;
+  position: relative;
+  top: 20px;
+  left: -410px;
+  /* opacity:0; */
+  transition: all 0.3s linear;
+}
+.container .sanlou .two .left .B .list ul {
+  width: 101%;
+  height: 100%;
+  /*    opacity: 1; */
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.container .sanlou .two .left .B .list ul li {
+  float: left;
+  width: 182px;
+  height: 100%;
+  bottom: 0px;
+  position: relative;
+  overflow: hidden;
+  margin-right: 12.5px;
+}
+.container .sanlou .two .left .B .list ul li a {
+  color: #fefefe;
+  font-size: 16px;
+  text-decoration: none;
+}
+.container .sanlou .two .left .B .list ul li a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.container .sanlou .two .left .B .list ul li a p {
+  display: block;
+  width: 185px;
+  height: 30px;
+  position: absolute;
+  font-size: 12px;
+  bottom: 0px;
+  left: 0px;
+  color: #cdbe91;
+  text-align: center;
+  line-height: 30px;
+  background: url(../imgs/dark70-bg-repeat.png);
+}
+.container .sanlou .two .left .B .list ul li a:hover > img {
+  transform: scale(1.2);
+}
+.container .sanlou .two .left .B:hover > .list {
+  height: 120px;
+}
+.container .sanlou .two .left .B:hover > .video {
+  opacity: 1;
+}
+.container .sanlou .two .right {
+  float: right;
+  width: 550px;
+  height: 100%;
+  position: relative;
+}
+.container .sanlou .two .right .box .A {
+  float: left;
+  width: 240px;
+  height: 254px;
+  margin-right: 20px;
+  position: relative;
+  background: rosybrown;
+}
+.container .sanlou .two .right .box .A .video {
+  width: 240px;
+  height: 120px;
+  position: absolute;
+  left: 0px;
+  background: pink;
+  top: 0;
+}
+.container .sanlou .two .right .box .A .video img {
+  width: 100%;
+  height: 100%;
+}
+.container .sanlou .two .right .box .A .video .video-1 {
+  width: 180px;
+  height: 160px;
+  background: white;
+  box-shadow: 68px 21px 19px 15px white;
+  position: absolute;
+  top: 0px;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.container .sanlou .two .right .box .A .video .video-1 .video-2 {
+  position: absolute;
+  top: -21px;
+  left: -16px;
+  width: 280px;
+  height: 200px;
+}
+.container .sanlou .two .right .box .A .video .video-1 .video-2 .bottom {
+  width: 100%;
+  height: 61px;
+  position: absolute;
+  bottom: -30px;
+  background-color: white;
+}
+.container .sanlou .two .right .box .A .video .video-1 .video-2 .bottom p {
+  display: block;
+  width: 280px;
+  height: 30px;
+  text-indent: 20px;
+  overflow: hidden;
+  line-height: 30px;
+  color: #0b0b0b;
+  font-size: 16px;
+}
+.container .sanlou .two .right .box .A .video .video-1 .video-2 .bottom span {
+  display: block;
+  width: 280px;
+  height: 20px;
+  width: 100px;
+  text-indent: 20px;
+  line-height: 20px;
+  color: #a1a1a2;
+}
+.container .sanlou .two .right .box .A .video .video-1 .video-2 .bottom a {
+  display: block;
+  width: 86px;
+  height: 30px;
+  border: 1px solid #bb9a6c;
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  font-size: 14px;
+  color: #bb9a6c;
+  text-align: center;
+  line-height: 30px;
+}
+.container .sanlou .two .right .box .A .video .video-1 .video-2 .bottom a:hover {
+  background: #bb9a6c;
+  color: white;
+}
+.container .sanlou .two .right .box .A .video:hover > .video-1 {
+  opacity: 1;
+}
+.container .sanlou .two .right .box .A .img {
+  bottom: 0px;
+  width: 240px;
+  height: 120px;
+  position: absolute;
+  left: 0px;
+  background: pink;
+}
+.container .sanlou .two .right .box .A .img img {
+  width: 100%;
+  height: 100%;
+}
+.container .sanlou .two .right .box .B {
+  float: left;
+  width: 240px;
+  height: 254px;
+  position: relative;
+}
+.container .sanlou .two .right .box .B .C {
+  display: block;
+  width: 240px;
+  height: 180px;
+  background: url(../images/0.jpg) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.container .sanlou .two .right .box .B .C .bg {
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/dark70-bg-repeat.png) repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
+.container .sanlou .two .right .box .B .C .bg .block {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: -400px 1px;
+}
+.container .sanlou .two .right .box .B .C .bg .block h3 {
+  font-weight: normal;
+  display: block;
+  width: 220px;
+  height: 40px;
+  text-align: center;
+  color: #cdbe91;
+  font-size: 16px;
+  position: absolute;
+  left: 10px;
+  top: 60px;
+}
+.container .sanlou .two .right .box .B .C .bg .block p {
+  position: absolute;
+  top: 113px;
+  left: 40px;
+  color: #aeaeae;
+  font-size: 11px;
+}
+.container .sanlou .two .right .box .B .C:hover > .bg {
+  opacity: 1;
+}
+.container .sanlou .two .right .box .B .btn {
+  display: block;
+  cursor: pointer;
+  width: 247px;
+  height: 60px;
+  color: white;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: -186px 320px;
+  position: absolute;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  bottom: 0px;
+  right: 0px;
+}
+.container .sanlou .two .right .box .B .btn .zuo {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 76px;
+  top: 21px;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: 745px 351px;
+}
+.container .sanlou .two .right .box .B .btn .jian {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 150px;
+  top: 21px;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 33px -41px;
+  animation: 1s linear infinite;
+  -webkit-animation: 1s linear infinite;
+}
+.container .sanlou .two .right .box .B .btn .you {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 180px;
+  top: 21.5px;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: 770px 351px;
+}
+.container .sanlou .two .right .box .B .btn .heros {
+  width: 430px;
+  height: 120px;
+  position: absolute;
+  top: 80px;
+  right: -20px;
+  box-shadow: 2px 1px 20px black;
+  background: white;
+  display: none;
+}
+.container .sanlou .two .right .box .B .btn .heros i {
+  display: block;
+  position: absolute;
+  top: -32px;
+  left: 290px;
+  border: 16px solid transparent;
+  border-bottom-color: white;
+}
+.container .sanlou .two .right .box .B .btn .heros ol {
+  width: 460px;
+  height: 100%;
+  position: relative;
+}
+.container .sanlou .two .right .box .B .btn .heros ol li {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 6px 6px;
+  border-radius: 50%;
+}
+.container .sanlou .two .right .box .B .btn .heros ol li img {
+  display: block;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px #bb9a6c solid;
+}
+.container .sanlou .two .right .box .B .btn:hover > .heros {
+  display: block;
+}
+.container .sanlou .two .right .box .B .btn:hover > .jian {
+  animation: arrowanim 1s linear;
+}
+.container .silou {
+  height: 500px;
+  width: 1350px;
+  position: relative;
+  padding: 50px 25px 0;
+  background-color: #e3e2e2;
+}
+.container .silou .siLeft {
+  float: left;
+  width: 760px;
+  height: 460px;
+}
+.container .silou .siLeft .top {
+  width: 100%;
+  height: 35px;
+  position: relative;
+}
+.container .silou .siLeft .top .span {
+  display: block;
+  float: left;
+  width: 4px;
+  height: 30px;
+  margin-top: 3px;
+  background-color: #1da6ba;
+}
+.container .silou .siLeft .top h2 {
+  float: left;
+  font-size: 24px;
+  font-weight: 400;
+  color: #0b0b0b;
+  line-height: 35px;
+  text-indent: 8px;
+}
+.container .silou .siLeft .top ul {
+  position: absolute;
+  top: 0px;
+  left: 125px;
+  width: 635px;
+  height: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  border-bottom: 1px #d6d7d8 solid;
+}
+.container .silou .siLeft .top ul li {
+  float: left;
+  width: auto;
+  min-width: 40px;
+  height: 36px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin: 3px 28px 0px 0px;
+  color: #676767;
+  cursor: pointer;
+}
+.container .silou .siLeft .top ul .active {
+  font-weight: bold;
+  color: #1da6ba;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 134px 27.44px;
+}
+.container .silou .siLeft .top ul a {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 37px;
+  font-size: 12px;
+  color: #7ea1a6;
+  text-indent: 33px;
+  line-height: 37px;
+  letter-spacing: 2px;
+}
+.container .silou .siLeft .top ul a i {
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 19px;
+  height: 15px;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 96px -91px;
+}
+.container .silou .siLeft .top ul a:hover {
+  font-weight: bold;
+  color: #1da6ba;
+  text-decoration: underline;
+}
+.container .silou .siLeft .top ul a:hover > i {
+  animation: arrowanim 1.5s linear;
+}
+.container .silou .siLeft .itemBox {
+  width: 100%;
+  height: 420px;
+}
+.container .silou .siLeft .itemBox .item {
+  width: 100%;
+  height: 420px;
+  position: relative;
+  top: 18px;
+  left: 0px;
+  display: none;
+}
+.container .silou .siLeft .itemBox .item ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.container .silou .siLeft .itemBox .item ul li {
+  position: relative;
+  height: 185px;
+  float: left;
+  width: 178.5px;
+  margin: 16px 15px 0px 0px;
+  background-color: #e3e2e2;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.container .silou .siLeft .itemBox .item ul li:nth-last-of-type(1) {
+  margin: 16px 0 0px 0px;
+}
+.container .silou .siLeft .itemBox .item ul li:nth-last-of-type(5) {
+  margin: 16px 0 0px 0px;
+}
+.container .silou .siLeft .itemBox .item ul li a {
+  display: block;
+  width: 100%;
+  height: 185px;
+  position: relative;
+}
+.container .silou .siLeft .itemBox .item ul li a .imgBox {
+  width: 100%;
+  height: 107px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.container .silou .siLeft .itemBox .item ul li a .imgBox img {
+  width: 100%;
+  height: 107px;
+}
+.container .silou .siLeft .itemBox .item ul li a .imgBox .video {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  position: absolute;
+  top: 32px;
+  left: 70px;
+  z-index: 100;
+  opacity: 0;
+}
+.container .silou .siLeft .itemBox .item ul li a .imgBox .video .bg {
+  display: block;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: -437px -253px;
+  transition: All 1.5s ease-in-out;
+}
+.container .silou .siLeft .itemBox .item ul li a .imgBox .video .bk {
+  display: block;
+  width: 11px;
+  height: 13px;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: -456px -316px;
+  position: absolute;
+  top: 22px;
+  left: 24px;
+}
+.container .silou .siLeft .itemBox .item ul li a .title {
+  display: block;
+  width: 173px;
+  height: 30px;
+  color: #424242;
+  position: absolute;
+  font-size: 13px;
+  top: 117px;
+  left: 8px;
+  text-align: left;
+}
+.container .silou .siLeft .itemBox .item ul li a .span_left {
+  display: block;
+  width: 78px;
+  height: 20px;
+  position: absolute;
+  bottom: 10px;
+  text-align: right;
+  font-size: 10px;
+  color: #919091;
+  line-height: 26px;
+  overflow: hidden;
+  left: 0;
+}
+.container .silou .siLeft .itemBox .item ul li a .span_right {
+  display: block;
+  width: 78px;
+  height: 20px;
+  position: absolute;
+  bottom: 10px;
+  text-align: right;
+  font-size: 10px;
+  color: #919091;
+  line-height: 26px;
+  overflow: hidden;
+  right: 8px;
+}
+.container .silou .siLeft .itemBox .item ul li a:hover > .title {
+  color: #1da6ba;
+}
+.container .silou .siLeft .itemBox .item ul li a:hover .video {
+  opacity: 1;
+}
+.container .silou .siLeft .itemBox .item ul li a:hover .video > .bg {
+  transform: rotate(360deg);
+}
+.container .silou .siLeft .itemBox .item ul li a:hover .video > .bk {
+  animation: heartBeat 1s linear;
+}
+.container .silou .siRight {
+  float: right;
+  width: 550px;
+  height: 440px;
+}
+.container .silou .siRight .top {
+  width: 100%;
+  height: 35px;
+  position: relative;
+}
+.container .silou .siRight .top .span {
+  display: block;
+  float: left;
+  width: 4px;
+  height: 30px;
+  margin-top: 3px;
+  background-color: #1da6ba;
+}
+.container .silou .siRight .top h2 {
+  float: left;
+  font-size: 24px;
+  font-weight: 400;
+  color: #0b0b0b;
+  line-height: 35px;
+  text-indent: 8px;
+}
+.container .silou .siRight .top ul {
+  position: absolute;
+  top: 0px;
+  left: 125px;
+  width: 400px;
+  height: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  border-bottom: 1px #d6d7d8 solid;
+}
+.container .silou .siRight .top ul li {
+  float: left;
+  width: auto;
+  min-width: 40px;
+  height: 36px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin: 3px 16.5px 0px 0px;
+  color: #676767;
+  cursor: pointer;
+}
+.container .silou .siRight .top ul .active {
+  font-weight: bold;
+  color: #1da6ba;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 134px 27.44px;
+}
+.container .silou .siRight .lun {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  top: 34px;
+  left: 0;
+  overflow: hidden;
+}
+.container .silou .siRight .lun .itemBox {
+  width: 4000px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+.container .silou .siRight .lun .itemBox .item {
+  width: 500px;
+  height: 300px;
+}
+.container .silou .siRight .lun .itemBox .item ul {
+  width: 530px;
+  height: 100%;
+  position: relative;
+}
+.container .silou .siRight .lun .itemBox .item ul li {
+  float: left;
+  width: 156px;
+  height: 300px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+.container .silou .siRight .lun .itemBox .item ul li .img1 {
+  width: 100%;
+  height: 211px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.container .silou .siRight .lun .itemBox .item ul li .img1 img {
+  width: 100%;
+  height: 100%;
+}
+.container .silou .siRight .lun .itemBox .item ul li .img1 h3 {
+  display: block;
+  width: 100%;
+  height: 32px;
+  color: white;
+  text-align: center;
+  line-height: 32px;
+  position: absolute;
+  top: 140px;
+  left: 0px;
+  font-size: 16px;
+}
+.container .silou .siRight .lun .itemBox .item ul li .img1 p {
+  display: block;
+  width: 100%;
+  height: 30px;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  position: absolute;
+  top: 166px;
+  left: 0px;
+}
+.container .silou .siRight .lun .itemBox .item ul li a {
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-size: 13px;
+  text-indent: 4px;
+  color: #919091;
+  margin: 6px 4px;
+  overflow: hidden;
+}
+.container .silou .siRight .lun .itemBox .item ul li a:hover {
+  color: #1da6ba;
+}
+.container .silou .siRight .lun .itemBox .item ul li .img2 {
+  width: 100%;
+  height: 32px;
+  position: relative;
+  bottom: 25px;
+  cursor: pointer;
+}
+.container .silou .siRight .lun .itemBox .item ul li .img2 span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  position: absolute;
+  left: 12px;
+  top: 20px;
+}
+.container .silou .siRight .lun .itemBox .item ul li .img2 span img {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+.container .silou .siRight .lun .itemBox .item ul li .img2 p {
+  font-size: 12px;
+  color: #919091;
+  position: absolute;
+  top: 24px;
+  left: 42px;
+  cursor: pointer;
+}
+.container .silou .siRight .lun .itemBox .item ul li .img2:hover > p {
+  color: #1da6ba;
+}
+.container .silou .siRight .Btn {
+  position: relative;
+  width: 553px;
+  height: 52px;
+  top: -188px;
+  left: -26px;
+  cursor: pointer;
+}
+.container .silou .siRight .Btn .btnLeft {
+  left: 0px;
+  width: 23px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  background: url(../imgs/index-spr.png);
+  background-position: -221px -396px;
+}
+.container .silou .siRight .Btn .btnRight {
+  right: 0px;
+  width: 23px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  background: url(../imgs/index-spr.png);
+  background-position: -193px -396px;
+}
+.container .silou .siRight .buttom {
+  width: 520px;
+  height: 50px;
+  position: absolute;
+  top: 435px;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: 0 -522px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.container .silou .siRight .buttom a {
+  display: inline-block;
+  margin: 5px 8px;
+  width: 490px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #ab8e66;
+  font-size: 16px;
+  text-decoration: none;
+}
+.container .silou .siRight .buttom a .bg {
+  display: block;
+  width: 20px;
+  height: 24px;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 28px -67px;
+  position: absolute;
+  top: 16px;
+  left: 315px;
+}
+.container .silou .siRight .buttom:hover .bg {
+  animation: arrowanim 1s linear;
+}
+.container .silou .siRight .buttom:hover a {
+  background: white;
+}
+.container .wulou {
+  height: 600px;
+  width: 1350px;
+  position: relative;
+  padding: 50px 25px 0;
+}
+.container .wulou .box {
+  width: 100%;
+  height: 580px;
+  position: relative;
+}
+.container .wulou .box .top {
+  width: 100%;
+  height: 35px;
+  position: relative;
+}
+.container .wulou .box .top .span {
+  display: block;
+  float: left;
+  width: 4px;
+  height: 30px;
+  margin-top: 3px;
+  background-color: #1da6ba;
+}
+.container .wulou .box .top h2 {
+  float: left;
+  font-size: 24px;
+  font-weight: 400;
+  color: #0b0b0b;
+  line-height: 35px;
+  text-indent: 8px;
+}
+.container .wulou .box .top ul {
+  position: absolute;
+  top: 0px;
+  left: 125px;
+  width: 1180px;
+  height: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  border-bottom: 1px #d6d7d8 solid;
+}
+.container .wulou .box .top ul li {
+  float: left;
+  width: auto;
+  min-width: 40px;
+  height: 36px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin: 3px 28px 0px 0px;
+  color: #676767;
+  cursor: pointer;
+}
+.container .wulou .box .top ul .active {
+  font-weight: bold;
+  color: #1da6ba;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 134px 27.44px;
+}
+.container .wulou .box .top ul a {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 280px;
+  height: 37px;
+  font-size: 12px;
+  color: #7ea1a6;
+  text-indent: 33px;
+  line-height: 37px;
+  letter-spacing: 2px;
+}
+.container .wulou .box .top ul a p {
+  position: absolute;
+  top: 0px;
+  left: 195px;
+}
+.container .wulou .box .top ul a span {
+  float: left;
+  display: block;
+  width: 25px;
+  height: 25px;
+  /* margin: 4px 10px; */
+  transform: translate(25px, 5px);
+  background: url(../images/lpl.png) repeat;
+  background-repeat: no-repeat;
+}
+.container .wulou .box .top ul a h3 {
+  position: relative;
+  top: 0px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: #676767;
+}
+.container .wulou .box .top ul a i {
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 19px;
+  height: 15px;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 96px -91px;
+}
+.container .wulou .box .top ul a:hover {
+  font-weight: bold;
+  color: #1da6ba;
+  text-decoration: underline;
+}
+.container .wulou .box .top ul a:hover > i {
+  animation: arrowanim 1.5s linear;
+}
+.container .wulou .box .itemBox {
+  width: 100%;
+  height: 530px;
+  position: relative;
+  padding-top: 20px;
+}
+.container .wulou .box .itemBox .item {
+  width: 100%;
+  height: 550px;
+  display: none;
+}
+.container .wulou .box .itemBox .item .Box {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  margin-top: -30px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #29a2b4;
+}
+.container .wulou .box .itemBox .item .Box img {
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -3px 2px 0 0;
+}
+.container .wulou .box .itemBox .item .Box a {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left {
+  width: 540px;
+  height: 100%;
+  float: left;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk {
+  width: 590px;
+  height: 235px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  left: -25px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .Btn {
+  position: relative;
+  width: 590px;
+  height: 52px;
+  top: -160px;
+  left: 0;
+  cursor: pointer;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .Btn .btnLeft {
+  left: 0px;
+  width: 23px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  background: url(../imgs/index-spr.png);
+  background-position: -221px -396px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .Btn .btnRight {
+  right: 0px;
+  width: 23px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  background: url(../imgs/index-spr.png);
+  background-position: -193px -396px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .text {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  text-align: left;
+  color: #29a2b4;
+  font-size: 16px;
+  font-weight: 700;
+  box-sizing: border-box;
+  padding-left: 1px;
+  margin-left: 25px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .text a {
+  margin-left: 10px;
+  font-weight: 400;
+  color: #676767;
+  text-decoration: none;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox {
+  width: 540px;
+  height: 235px;
+  overflow: hidden;
+  margin-left: 25px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul {
+  width: 1630px;
+  height: 200px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: flex;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li {
+  width: 260px;
+  height: 200px;
+  margin: 0px 14px 0px 0px;
+  position: relative;
+  background-color: white;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .block {
+  display: inline-block;
+  width: 260px;
+  height: 28px;
+  background: url(../images/gamelist-top-ware.png) repeat;
+  background-color: #B4B3B3;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .ps {
+  display: block;
+  width: 260px;
+  height: 28px;
+  color: white;
+  line-height: 28px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .ps .span1 {
+  margin-left: 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .ps .span2 {
+  margin: 0px 16px 0px 101px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .ps .span3 {
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_list {
+  width: 110%;
+  height: 110px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_list .let {
+  float: left;
+  width: 86px;
+  height: 110px;
+  margin: 0px 1px;
+  position: relative;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_list .let .img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 17px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_list .let .img img {
+  width: 100%;
+  height: 100%;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_list .let .title {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 10px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_list .let .title h3 {
+  display: block;
+  width: 100%;
+  height: 30px;
+  text-indent: 25px;
+  font-weight: normal;
+  color: #385155;
+  font-size: 18px;
+  line-height: 20px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_list .game_cen .inline {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  top: 15px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_list .game_cen .inline a {
+  font-size: 34px;
+  color: black;
+  font-weight: 700;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_list .game_cen .block {
+  display: block;
+  width: 84px;
+  height: 26px;
+  font-size: 12px;
+  color: #727272;
+  text-align: center;
+  line-height: 26px;
+  position: absolute;
+  bottom: 10px;
+  background-color: white;
+  border: 1px #727272 solid;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_list .game_cen .block:hover {
+  transition: all 0.4s;
+  color: white;
+  background-image: none;
+  background-color: #727272;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_btn {
+  width: 260px;
+  height: 40px;
+  position: absolute;
+  top: 114px;
+  text-align: center;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pk .liBox ul li .game_btn p {
+  font-size: 12px;
+  color: #727272;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai {
+  width: 540px;
+  height: 320px;
+  position: relative;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiTop {
+  width: 100%;
+  height: 35px;
+  position: relative;
+  top: 10px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiTop h2 {
+  float: left;
+  font-size: 18px;
+  font-weight: 400;
+  color: #0b0b0b;
+  line-height: 35px;
+  text-indent: 8px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiTop ul {
+  position: absolute;
+  top: 0px;
+  left: 90px;
+  width: 445px;
+  height: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  border-bottom: 1px #d6d7d8 solid;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiTop ul li {
+  float: left;
+  width: auto;
+  min-width: 40px;
+  height: 36px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin: 3px 28px 0px 0px;
+  color: #676767;
+  cursor: pointer;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiTop ul .active {
+  font-weight: bold;
+  color: #1da6ba;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 134px 27.44px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox {
+  width: 100%;
+  height: 257px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem {
+  width: 540px;
+  height: 257px;
+  display: none;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem .mkBlock {
+  display: inline-block;
+  width: 100%;
+  height: 32px;
+  background-color: #e0e0e0;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem .mkBlock a {
+  float: left;
+  display: block;
+  width: 88px;
+  height: 100%;
+  text-align: center;
+  line-height: 32px;
+  color: #151517;
+  padding: 0px 22px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: -webkit-grab;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem .mkBlock .a_1 {
+  padding: 0px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem .paiList {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  top: 0px;
+  background-color: white;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem .paiList li {
+  width: 490px;
+  height: 46px;
+  margin-left: 26px;
+  line-height: 46px;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem .paiList span {
+  float: left;
+  display: block;
+  width: 44px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+  margin-right: 75px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem .paiList .img {
+  width: 66px;
+  text-indent: 30px;
+  font-size: 16px;
+  color: #151517;
+  position: relative;
+  margin-left: -10px;
+  margin-right: 64px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem .paiList .img img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem .paiList .one {
+  text-indent: -4px;
+  font-family: tttgbnumber, sans-serif;
+  font-size: 18px;
+  color: #7b7b7b;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem .paiList .text {
+  font-size: 16px;
+  color: #5f8d94;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .left .pai .paiItemBox .paiItem .paiList .three {
+  margin-left: 12px;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .right {
+  width: 730px;
+  height: 100%;
+  float: right;
+  position: relative;
+  background: rgba(146, 145, 145, 0.6);
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .right .Box {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  margin-top: -30px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #29a2b4;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .right .Box img {
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -3px 2px 0 0;
+}
+.container .wulou .box .itemBox .item:nth-of-type(1) .right .Box a {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.container .liulou {
+  background-color: #e3e2e2;
+  width: 1350px;
+  height: 560px;
+  position: relative;
+  margin: 40px auto;
+  padding: 50px 25px 0;
+}
+.container .liulou .box {
+  width: 100%;
+  height: 580px;
+  position: relative;
+}
+.container .liulou .box .top {
+  width: 100%;
+  height: 35px;
+  position: relative;
+}
+.container .liulou .box .top .span {
+  display: block;
+  float: left;
+  width: 4px;
+  height: 30px;
+  margin-top: 3px;
+  background-color: #1da6ba;
+}
+.container .liulou .box .top h2 {
+  float: left;
+  font-size: 24px;
+  font-weight: 400;
+  color: #0b0b0b;
+  line-height: 35px;
+  text-indent: 8px;
+}
+.container .liulou .box .top ul {
+  position: absolute;
+  top: 0px;
+  left: 180px;
+  width: 1100px;
+  height: 100%;
+  z-index: 100;
+  list-style: none;
+  box-sizing: border-box;
+  border-bottom: 1px #d6d7d8 solid;
+}
+.container .liulou .box .top ul li {
+  float: left;
+  position: relative;
+  width: 80px;
+  height: 42px;
+  font-size: 15px;
+  color: #676767;
+  margin-right: 15px;
+  line-height: 42px;
+  cursor: pointer;
+}
+.container .liulou .box .top ul li span {
+  float: left;
+  display: block;
+  width: 21px;
+  height: 32px;
+  position: absolute;
+  top: 11px;
+  left: -26px;
+  background: url(../imgs/index-spr.png) repeat;
+  background-size: 638px 572px;
+  background-repeat: no-repeat;
+  background-position: -406px -316px;
+}
+.container .liulou .box .top ul .active {
+  font-weight: 700;
+  color: #1da6ba;
+}
+.container .liulou .box .top ul .active span {
+  background-position: -428px -316px;
+}
+.container .liulou .box .top ul li:hover span {
+  background-position: -428px -316px;
+}
+.container .liulou .box .top ul li:hover {
+  font-weight: 700;
+  color: #1da6ba;
+}
+.container .liulou .box .top ul a {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 37px;
+  font-size: 12px;
+  color: #7ea1a6;
+  text-indent: 33px;
+  line-height: 37px;
+  letter-spacing: 2px;
+}
+.container .liulou .box .top ul a i {
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 19px;
+  height: 15px;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 96px -91px;
+}
+.container .liulou .box .top ul a:hover {
+  font-weight: bold;
+  color: #1da6ba;
+  text-decoration: underline;
+}
+.container .liulou .box .top ul a:hover > i {
+  animation: arrowanim 1.5s linear;
+}
+.container .liulou .box .itemBox {
+  width: 100%;
+  height: 525px;
+  position: relative;
+  top: 20px;
+}
+.container .liulou .box .itemBox .item {
+  width: 100%;
+  height: 525px;
+  position: absolute;
+  display: none;
+}
+.container .liulou .box .itemBox .item ul {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0px;
+}
+.container .liulou .box .itemBox .item ul li {
+  float: left;
+  width: 90px;
+  height: 100px;
+  position: relative;
+  margin: 0px 10px 35px 7px;
+  cursor: pointer;
+  z-index: 999;
+}
+.container .liulou .box .itemBox .item ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.container .liulou .box .itemBox .item ul li a img {
+  display: block;
+  margin: 0 auto;
+  width: 66px;
+  height: 66px;
+}
+.container .liulou .box .itemBox .item ul li a div {
+  width: 66px;
+  height: 66px;
+  position: relative;
+  opacity: 0;
+  transition: 0.2s;
+}
+.container .liulou .box .itemBox .item ul li a div i {
+  display: block;
+  width: 66px;
+  height: 66px;
+  position: absolute;
+  top: -66px;
+  left: 12px;
+  opacity: 0.8;
+  background: url(../imgs/dark70-bg-repeat.png);
+}
+.container .liulou .box .itemBox .item ul li a div i span {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 20px auto;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: -401px -225px;
+}
+.container .liulou .box .itemBox .item ul li a p {
+  display: block;
+  width: 90px;
+  height: 32px;
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  line-height: 32px;
+  position: absolute;
+  bottom: 0px;
+}
+.container .liulou .box .itemBox .item ul li a:hover div {
+  opacity: 1;
+}
+.container .liulou .box .itemBox .item ul li a:hover p {
+  color: #1da6ba;
+}
+.container .qilou {
+  width: 1350px;
+  height: 470px;
+  position: relative;
+  margin: 40px auto;
+  padding: 30px 25px 0;
+}
+.container .qilou .left {
+  float: left;
+  width: 760px;
+  height: 440px;
+}
+.container .qilou .left .top {
+  width: 100%;
+  height: 35px;
+  position: relative;
+}
+.container .qilou .left .top .span {
+  display: block;
+  float: left;
+  width: 4px;
+  height: 30px;
+  margin-top: 3px;
+  background-color: #1da6ba;
+}
+.container .qilou .left .top h2 {
+  float: left;
+  font-size: 24px;
+  font-weight: 400;
+  color: #0b0b0b;
+  line-height: 35px;
+  text-indent: 8px;
+}
+.container .qilou .left .top ul {
+  position: absolute;
+  top: 0px;
+  left: 125px;
+  width: 635px;
+  height: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+}
+.container .qilou .left .top ul a {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 37px;
+  font-size: 12px;
+  color: #7ea1a6;
+  text-indent: 33px;
+  line-height: 37px;
+  letter-spacing: 2px;
+}
+.container .qilou .left .top ul a i {
+  display: block;
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 19px;
+  height: 15px;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 96px -91px;
+}
+.container .qilou .left .top ul a:hover {
+  font-weight: bold;
+  color: #1da6ba;
+  text-decoration: underline;
+}
+.container .qilou .left .top ul a:hover > i {
+  animation: arrowanim 1.5s linear;
+}
+.container .qilou .left ul {
+  width: 840px;
+  height: 409px;
+  position: relative;
+  top: 0px;
+  left: 10px;
+}
+.container .qilou .left ul li {
+  float: left;
+  width: 180px;
+  height: 180px;
+  margin-top: 14px;
+  margin-right: 15.5px;
+  position: relative;
+  background-color: yellow;
+}
+.container .qilou .left ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.container .qilou .left ul li a img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+.container .qilou .left ul li a .bg {
+  width: 180px;
+  height: 0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+  background: url(../imgs/dark70-bg-repeat.png) repeat center;
+  transition: all 0.6s;
+}
+.container .qilou .left ul li a .bg ._name {
+  margin: 10px 12px;
+  font-size: 12px;
+  color: white;
+}
+.container .qilou .left ul li a .bg ._name:hover {
+  text-decoration: underline;
+}
+.container .qilou .left ul li a .bg .ceng {
+  display: inline-block;
+  width: 100%;
+  height: 32px;
+  position: relative;
+  color: #aeaeae;
+  font-size: 11px;
+}
+.container .qilou .left ul li a .bg .ceng img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+}
+.container .qilou .left ul li a .bg .ceng .text {
+  color: #b2b2b2;
+  font-size: 12px;
+  position: absolute;
+  top: 2px;
+  left: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.container .qilou .left ul li a .bg .ceng .text:hover {
+  color: white;
+}
+.container .qilou .left ul li a .bg .ceng i {
+  display: block;
+  width: 28px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 133px;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: -456px -226px;
+}
+.container .qilou .left ul li a .bg .ceng i:hover {
+  background-position: -428px -226px;
+}
+.container .qilou .left ul li a .bg .ceng i:hover + .number {
+  color: white;
+}
+.container .qilou .left ul li a .bg .ceng .number {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  font-size: 14px;
+  color: #b2b2b2;
+}
+.container .qilou .left ul li a:hover .bg {
+  height: 60px;
+}
+.container .qilou .left ul li a:hover > img {
+  transform: scale(1.2);
+}
+.container .qilou .right {
+  float: right;
+  width: 550px;
+  height: 440px;
+  position: relative;
+}
+.container .qilou .right .one {
+  position: absolute;
+  left: 10px;
+  width: 241px;
+  height: 424px;
+  transition: 0.6s;
+}
+.container .qilou .right .one img {
+  width: 100%;
+  height: 100%;
+}
+.container .qilou .right .one:hover {
+  transform: translateY(-20px);
+  filter: brightness(1.3);
+}
+.container .qilou .right .two {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  right: 40px;
+  top: 0px;
+}
+.container .qilou .right .two ul {
+  width: 100%;
+  height: 380px;
+  position: relative;
+  top: 44px;
+}
+.container .qilou .right .two ul li {
+  background: #1da6ba;
+  width: 100%;
+  height: 87px;
+  transition: 0.4s;
+  margin-bottom: 20px;
+}
+.container .qilou .right .two ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.container .qilou .right .two ul li p {
+  display: inline-block;
+  width: 100%;
+  height: 32px;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  font-size: 14px;
+  color: white;
+  text-indent: 50px;
+  line-height: 32px;
+  overflow: hidden;
+}
+.container .qilou .right .two ul li p i {
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 23px;
+  width: 17px;
+  height: 17px;
+  background: url(../imgs/index-spr.png) repeat center;
+  background-position: -484px -226px;
+}
+.container .qilou .right .two ul li:hover {
+  filter: brightness(1.2);
+}
+.container .qilou .right .two ul .btn {
+  margin-bottom: 0;
+  width: 100%;
+  height: 60px;
+  color: white;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: -186px 320px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  margin-left: -3px;
+}
+.container .qilou .right .two ul .btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  color: #fefefe;
+  font-size: 13px;
+  text-decoration: none;
+}
+.container .qilou .right .two ul .btn a .zuo {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 60px;
+  top: 21px;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: 745px 351px;
+}
+.container .qilou .right .two ul .btn a .jian {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 150px;
+  top: 21px;
+  background: url(../imgs/comm-spr.png) repeat;
+  background-position: 33px -41px;
+}
+.container .qilou .right .two ul .btn a .you {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 173px;
+  top: 21px;
+  background: url(../imgs/index-spr.png) repeat;
+  background-position: 770px 351px;
+}
+.container .qilou .right .two ul .btn:hover .jian {
+  animation: arrowanim 1.5s linear;
+}
+.container .qilou .right .two ul .btn:hover {
+  filter: brightness(1.1);
+}
+.container .buttom {
+  width: 100%;
+  min-width: 1350px;
+  height: 400px;
+  margin: 10px auto;
+  background-color: #e3e2e2;
+}
+.container .buttom footer {
+  width: 1350px;
+  height: 400px;
+  position: relative;
+}
+.container .buttom footer .footer_left {
+  width: 340px;
+  height: 150px;
+  position: absolute;
+  left: 40px;
+  top: 15%;
+}
+.container .buttom footer .footer_left .l {
+  display: block;
+  width: 190px;
+  height: 35px;
+  position: absolute;
+  top: 37px;
+  left: 0px;
+  background: url(../imgs/topfoot-spr.png) repeat;
+  background-size: 405px 178px;
+  background-repeat: no-repeat;
+  background-position: -216px 0;
+}
+.container .buttom footer .footer_left .r {
+  display: block;
+  width: 89px;
+  height: 55px;
+  position: absolute;
+  top: 27px;
+  right: 30px;
+  background: url(../images/topfoot-spr.png) repeat;
+  background-position: -216px -84px;
+  background-repeat: no-repeat;
+  background-size: 405px 178px;
+}
+.container .buttom footer .footer_right {
+  top: 12%;
+  width: 780px;
+  height: 200px;
+  position: absolute;
+  right: 50px;
+}
+.container .buttom footer .footer_right ul li {
+  height: 22px;
+  line-height: 20px;
+  color: #9f9378;
+}
+.container .buttom footer .footer_right ul li a {
+  font-size: 12px;
+  color: #9f9378;
+}
+.container .buttom footer .footer_right ul li a:hover {
+  text-decoration: underline;
+}
+.container .buttom footer .footer_right ul li .stle:hover {
+  text-decoration: none;
+}
